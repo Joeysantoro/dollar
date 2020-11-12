@@ -794,7 +794,7 @@ describe('Bonding', function () {
       await this.bonding.unbondUnderlying(2000, {from: userAddress});
 
       await time.increase(86400);
-      for (var i = 0; i < 14; i++) {
+      for (var i = 0; i < 6; i++) {
         await this.bonding.stepE({from: userAddress});
       }
     });
@@ -805,7 +805,7 @@ describe('Bonding', function () {
       });
 
       it('is correct epoch', async function () {
-        expect(await this.bonding.epoch()).to.be.bignumber.equal(new BN(17));
+        expect(await this.bonding.epoch()).to.be.bignumber.equal(new BN(9));
       });
     });
 
@@ -819,7 +819,7 @@ describe('Bonding', function () {
       });
 
       it('is correct epoch', async function () {
-        expect(await this.bonding.epoch()).to.be.bignumber.equal(new BN(18));
+        expect(await this.bonding.epoch()).to.be.bignumber.equal(new BN(10));
       });
 
       it('has correct snapshots', async function () {

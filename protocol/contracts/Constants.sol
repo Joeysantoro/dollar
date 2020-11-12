@@ -58,7 +58,7 @@ library Constants {
 
     /* DAO */
     uint256 private constant ADVANCE_INCENTIVE = 1e20; // 100 ESD
-    uint256 private constant DAO_EXIT_LOCKUP_EPOCHS = 15; // 15 epochs fluid
+    uint256 private constant DAO_EXIT_LOCKUP_EPOCHS = 7; // 7 epochs fluid
 
     /* Pool */
     uint256 private constant POOL_EXIT_LOCKUP_EPOCHS = 5; // 5 epochs fluid
